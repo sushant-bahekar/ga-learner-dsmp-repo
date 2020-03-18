@@ -1,10 +1,4 @@
-# --------------
-# Code starts here
-
 import numpy as np
-
-# Code starts here
-
 # Adjacency matrix
 adj_mat = np.array([[0,0,0,0,0,0,1/3,0],
                    [1/2,0,1/2,1/3,0,0,0,0],
@@ -26,11 +20,6 @@ print(eigen_1)
 
 page = np.where(np.max(eigen_1) == eigen_1) [0][0]+1
 print(page)
-# Code ends here
-
-
-# --------------
-# Code starts here
 
 # Initialize stationary vector I
 init_I = np.array([1,0,0,0,0,0,0,0])
@@ -41,13 +30,7 @@ for _ in range(10):
 print(init_I)
 power_page = np.where(np.max(init_I) == init_I)[0][0]+1
 print(power_page)
-# Code ends here
 
-
-# --------------
-# Code starts here
-
-# New Adjancency matrix
 # New Adjancency matrix
 new_adj_mat = np.array([[0,0,0,0,0,0,0,0],
                    [1/2,0,1/2,1/3,0,0,0,0],
@@ -67,13 +50,6 @@ for _ in range(10):
     new_init_I /= np.linalg.norm(new_init_I, 1)
 print(new_init_I)
 print('='*20)
-
-
-
-# Code ends here
-
-
-# --------------
 # Alpha value
 alpha = 0.85
 # Code starts here

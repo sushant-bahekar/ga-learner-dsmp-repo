@@ -11,8 +11,6 @@ X_train,X_test,y_train,y_test = train_test_split(X, y, test_size = 0.3, random_s
 corr = X_train.corr()
 print(corr)
 
-
-# --------------
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 # Code starts here
@@ -22,8 +20,6 @@ y_pred = regressor.predict(X_test)
 r2 = r2_score(y_test, y_pred)
 print(r2)
 
-
-# --------------
 from sklearn.linear_model import Lasso
 # Code starts here
 lasso = Lasso()
@@ -32,8 +28,6 @@ lasso_pred = lasso.predict(X_test)
 r2_lasso = r2_score(y_test, lasso_pred)
 print(r2_lasso)
 
-
-# --------------
 from sklearn.linear_model import Ridge
 # Code starts here
 ridge = Ridge()
@@ -43,8 +37,6 @@ r2_ridge = r2_score(y_test, ridge_pred)
 print(r2_ridge)
 # Code ends here
 
-
-# --------------
 from sklearn.model_selection import cross_val_score
 #Code starts here
 regressor = LinearRegression()
@@ -52,8 +44,6 @@ score = cross_val_score(regressor, X_train, y_train, cv=10)
 mean_score = np.mean(score)
 print(mean_score)
 
-
-# --------------
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
 #Code starts here
